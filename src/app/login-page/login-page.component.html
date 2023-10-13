@@ -1,0 +1,6 @@
+<p>login-page works!</p>
+
+<label for="inputLogin">Login:</label>
+<input id="inputLogin" name="login" type="text" [(ngModel)] = "login" />
+<label for="inputPassword">Password:</label>
+<input id="inputPassword" name="password" type="password" [value]="defaultLogin" (keypress)="keyPressEnter()" />

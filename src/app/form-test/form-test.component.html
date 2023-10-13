@@ -1,0 +1,15 @@
+<p>form-test works!</p>
+<div class="form-test">
+    <h1>Form Test</h1>
+    <input type="text" placeholder="Form title" [(ngModel)]="title" />
+    <textarea placeholder="Form details" height="100px" [(ngModel)]="details"></textarea>
+    <input type="text" placeholder="Form image URL" [(ngModel)]="imageURL" />
+    <input type="text" placeholder="Form link URL" [(ngModel)]="linkURL" />
+    <input type="checkbox" [(ngModel)]="changeBackground" />Change background
+</div>
+<div class="form-test">
+    <h3 [style.background] = "changeBackground ? 'yellow' : 'initial'">{{title}}</h3>
+    <p>{{details}}</p>
+    <img [src]="imageURL"/>
+    <a [href]="linkURL" [style.display] = "linkURL ? 'block' : 'none'">Custom url</a>
+</div>

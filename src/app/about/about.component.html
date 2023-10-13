@@ -1,1 +1,20 @@
 <p>about works!</p>
+<h5>{{title}}</h5>
+<ul>
+    <li *ngFor="let test of vs">
+        {{test}}
+    </li>
+</ul>
+<button #Button1 (click)="onclick_button1()">Teste button</button>
+<label for="input1">Press any key</label>
+<input #inputAnyKey id="input1" type="text" (keyup)="onkeyUp($event)"/>
+<label for="input2">Press Enter key</label>
+<input #inputEnterKey id="input2" type="text" (keyup.enter)="onkeyUpEnter()"/>
+
+<div [ngSwitch]="myValue">
+    <div *ngSwitchCase="'A'">You selected A</div>
+    <div *ngSwitchCase="'B'">You selected B</div>
+    <div *ngSwitchCase="'C'">You selected C</div>
+    <div *ngSwitchDefault>You selected something else</div>
+  </div>
+  

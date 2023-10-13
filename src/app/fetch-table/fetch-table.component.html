@@ -1,0 +1,29 @@
+<p>fetch-table works!</p>
+<div class="form-custom">
+    <h1>Table dinamic add to exclude</h1>
+    <input type="text" placeholder="title" [(ngModel)]="name" />
+    <input type="text" placeholder="email" [(ngModel)]="email" />
+    <textarea type="text" placeholder="description" [(ngModel)]="description"></textarea>
+    <button (click)="onClick()">Save</button>
+</div>
+<div class="table-area" *ngIf="userArray.length > 0; else noData">
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Description</th>
+            <th></th>
+        </thead>
+        <tr *ngFor="let user of userArray; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{name}}</td>
+            <td>{{email}}</td>
+            <td>{{description}}</td>
+            <button (click)="onDelete(i)">Delete</button>
+        </tr>
+    </table>
+</div>
+<ng-template #noData>
+    <h2>No data to show</h2>
+</ng-template>

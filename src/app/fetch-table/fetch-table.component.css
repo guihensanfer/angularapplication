@@ -1,0 +1,6 @@
+.form-custom{
+    display: block;
+}
+.form-custom input, .form-custom button{
+    display: block;
+}
