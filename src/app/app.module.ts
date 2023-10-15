@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FormTestComponent } from './form-test/form-test.component';
 import { FetchTableComponent } from './fetch-table/fetch-table.component';
@@ -29,12 +29,13 @@ const routes: Routes = [
     FormTestComponent,
     FetchTableComponent,
     PipesComponent,
-    FormValidationsComponent
+    FormValidationsComponent    
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
